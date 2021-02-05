@@ -1,11 +1,12 @@
 import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
-@import url("https://use.typekit.net/omg2dtu.css");
+@import url("https://use.typekit.net/kqk7uco.css");
   :root {
     --primary-color: #ed1f24;
     --white: #FFFAFF;
     --yellow: #F2E9CE;
+    --pink: #F29696;
     --background: #3B3A3C;
     --box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
     --speed: 500ms; 
@@ -14,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: muli, sans-serif;
+    font-family: futura-pt, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
