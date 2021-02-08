@@ -5,9 +5,11 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     --primary-color: #ed1f24;
     --white: #FFFAFF;
-    --yellow: #F2E9CE;
+    /* --yellow: #F2E9CE; */
+    --yellow: #F7F0F0;
     --pink: #F29696;
     --background: #3B3A3C;
+    /* --background: #FFFFFF; */
     --box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
     --speed: 500ms; 
   }
@@ -26,6 +28,8 @@ export const GlobalStyle = createGlobalStyle`
     min-width: 350px;
     background-color: var(--background)
   }
+
+
 
   a:link {
   text-decoration: none;

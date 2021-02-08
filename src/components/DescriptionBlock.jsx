@@ -8,6 +8,11 @@ const StyledDescriptionBlock = styled.div`
   width: 600px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 600px) {
+    width: 340px;
+    height: 340px;
+  }
 `
 
 const DescriptionBlock = () => {

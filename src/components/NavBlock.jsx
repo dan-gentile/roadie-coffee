@@ -1,13 +1,23 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 
 const StyledNavBlock = styled.div`
   height: 150px;
-  width: 600px;
+  width: 100%;
   background-color: var(--pink);
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 0 0 4px 0;
+
+  transform: translateY(10%);
+  animation: move-it 2s forwards;
+
+  @keyframes move-it {
+    to {
+      transform: translateY(0);
+    }
+  }
 `
 const StyledSVGDiv = styled.div`
   position: relative;
@@ -27,6 +37,12 @@ const StyledPageNumberDiv = styled.div`
 `
 
 const NavBlock = () => {
+  const [nextPage, setNextPage] = useState(false)
+
+  useEffect(() => {
+    console.log("changed")
+  }, [nextPage])
+
   return (
     <StyledNavBlock>
       <StyledSVGDiv>
@@ -47,6 +63,8 @@ const NavBlock = () => {
         </svg>
 
         <svg
+          onClick={() => setNextPage(!nextPage)}
+          style={{ cursor: "pointer" }}
           xmlns="http://www.w3.org/2000/svg"
           width="40"
           height="40"

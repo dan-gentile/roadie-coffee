@@ -7,6 +7,20 @@ const StyledImgBlock = styled.img`
   object-fit: cover;
   width: 600px;
   height: 600px;
+  border-radius: 4px 0 0 4px;
+  transform: translateX(-10%);
+  animation: move-it 2s forwards;
+
+  @media (max-width: 600px) {
+    width: 340px;
+    height: 340px;
+  }
+
+  @keyframes move-it {
+    to {
+      transform: translateX(0);
+    }
+  }
 `
 
 const ImageBlock = () => {

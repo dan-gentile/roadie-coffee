@@ -4,12 +4,20 @@ import TextBtn from "./TextBtn"
 
 const StyledDescription = styled.div`
   height: 450px;
-  width: 600px;
+  width: 100%;
   background-color: transparent;
-
   display: flex;
   flex-direction: column;
   perspective: 1000px;
+
+  transform: translateX(10%);
+  animation: move-it 2s forwards;
+
+  @keyframes move-it {
+    to {
+      transform: translateX(0);
+    }
+  }
 `
 
 const StyledDescriptionInner = styled.div`
@@ -19,7 +27,6 @@ const StyledDescriptionInner = styled.div`
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-
   transform: ${({ flip }) => (flip ? "rotateY(180deg)" : "rotateY(0)")};
 `
 
@@ -34,6 +41,7 @@ const StyledDescriptionFront = styled.div`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  border-radius: 0 4px 0 0;
 
   h1 {
     font-weight: 800;
@@ -60,6 +68,7 @@ const StyledDescriptionBack = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  border-radius: 0 4px 0 0;
 `
 const StyledBtnDiv = styled.div`
   width: 50%;

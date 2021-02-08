@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Burger from "./Burger"
 import logo from "../images/header-logo.png"
+import { Link } from "gatsby"
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -11,6 +12,13 @@ const StyledHeader = styled.header`
   align-items: center;
   z-index: 1;
   border-bottom: 1px solid #707070;
+  opacity: 0;
+  animation: opacity 1.5s ease-in forwards;
+  @keyframes opacity {
+    to {
+      opacity: 1;
+    }
+  }
 `
 
 const StyledHeaderLogo = styled.img`
@@ -20,7 +28,9 @@ const StyledHeaderLogo = styled.img`
 const Header = () => {
   return (
     <StyledHeader>
-      <StyledHeaderLogo src={logo} alt="headerlogo" />
+      <Link to="/">
+        <StyledHeaderLogo src={logo} alt="headerlogo" />
+      </Link>
       <Burger />
     </StyledHeader>
   )
